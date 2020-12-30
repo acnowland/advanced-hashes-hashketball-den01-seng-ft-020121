@@ -129,4 +129,5 @@ end
 #shoe_size --> takes arg of name and outputs shoe size 
 #team_colors --> arg of team name and returns array of jersey colors 
 # team_names --> returns team names 
+#player_nubers --> takes team name and returns  all players jersey numbers 
 # Write code here
