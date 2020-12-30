@@ -138,7 +138,9 @@ end
 def num_points_scored(player_name)
   all_info = game_hash
   all_info.each do |location, values|
-    binding.pry
+    values.each do |basic_info, details|
+      binding.pry
+    end
   end
   
 end
