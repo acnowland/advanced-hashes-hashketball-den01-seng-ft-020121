@@ -140,8 +140,7 @@ def num_points_scored(player_name)
   all_info[:home][:players].each do |player|
     if player[:player_name] === player_name
       return player[:points]
-    end
-    binding.pry
+    else
   end
 end
 
