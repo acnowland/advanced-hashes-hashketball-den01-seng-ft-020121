@@ -125,5 +125,8 @@ def game_hash
     }
   }
 end
-
+#num_points_scored --> takes argument of name and returns # points scored 
+#shoe_size --> takes arg of name and outputs shoe size 
+#team_colors --> arg of team name and returns array of jersey colors 
+# team_names --> returns team names 
 # Write code here
