@@ -175,9 +175,7 @@ def team_names
   teams = []
   teams.push(all_info[:home][:team_name])
   teams.push(all_info[:away][:team_name])
-  binding.pry 
   return teams
-  
 end
 
     
