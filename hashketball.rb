@@ -174,7 +174,7 @@ def team_names
   all_info = game_hash
   teams = []
   teams.push(all_info[:home][:team_name])
-  teamss.push(all_info[:away][:team_name])
+  teams.push(all_info[:away][:team_name])
   binding.pry 
   return teams
   
