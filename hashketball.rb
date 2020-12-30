@@ -218,7 +218,13 @@ def big_shoe_rebounds
       player_bigfoot = player
     end
   end
-  binding.pry
+  all_info[:away][:players].each do |player|
+    if player[:shoe] > biggest_shoe
+      biggest_shoe = player[:shoe]
+      player_bigfoot = player
+    end
+  end
+  return player_bigfoot[:rebounds]
 end
 
 
