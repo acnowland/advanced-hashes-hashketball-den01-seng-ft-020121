@@ -137,7 +137,7 @@ end
 
 def num_points_scored(player_name)
   all_info = game_hash
-  all_info[:home][:players].each do |player, info|
+  all_info[:home][:players].each do |player|
     binding.pry 
   end
   
