@@ -168,6 +168,7 @@ def team_colors(team_name)
     return all_info[:all_info][:home][:colors]
   end
   return all_info[:all_info][:away][:colors]
+  binding.pry
 end
 
     
