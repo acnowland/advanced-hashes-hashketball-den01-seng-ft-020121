@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pry'
 def game_hash
   {
     home: {
@@ -125,5 +126,115 @@ def game_hash
     }
   }
 end
-
+#num_points_scored --> takes argument of name and returns # points scored 
+#shoe_size --> takes arg of name and outputs shoe size 
+#team_colors --> arg of team name and returns array of jersey colors 
+# team_names --> returns team names 
+#player_nubers --> takes team name and returns  all players jersey numbers 
+#player_stats returns all stats for a given player 
+#big_shoe_rebounds --> finds biggest shoe size and returns number of rebounds they had 
 # Write code here
+def num_points_scored(player_name)
+  all_info = game_hash
+  all_info[:home][:players].each do |player|
+    if player[:player_name] === player_name
+      return player[:points]
+    end
+  end
+  all_info[:away][:players].each do |player_away|
+    if player_away[:player_name] === player_name
+      return player_away[:points]
+    end
+  end
+end
+
+def shoe_size(player_name)
+  all_info = game_hash
+  all_info[:home][:players].each do |player|
+    if player[:player_name] === player_name
+      return player[:shoe]
+    end
+  end
+  all_info[:away][:players].each do |player_away|
+    if player_away[:player_name] === player_name
+      return player_away[:shoe]
+    end
+  end
+end
+
+def team_colors(team_name)
+  all_info = game_hash
+  if all_info[:home][:team_name] == team_name
+    return all_info[:home][:colors]
+  end
+  return all_info[:away][:colors]
+end
+
+def team_names
+  all_info = game_hash
+  teams = []
+  teams.push(all_info[:home][:team_name])
+  teams.push(all_info[:away][:team_name])
+  return teams
+end
+
+def player_numbers(team_name)
+  all_info = game_hash
+  all_nums = []
+  if all_info[:home][:team_name] == team_name
+    all_info[:home][:players].each do |player|
+      all_nums.push(player[:number])
+    end
+  end
+  if all_info[:away][:team_name] == team_name
+    all_info[:away][:players].each do |player|
+      all_nums.push(player[:number])
+    end
+  end
+  return all_nums
+end
+
+def player_stats(player_name)
+  all_info = game_hash 
+  all_info[:home][:players].each do |player|
+    if player[:player_name] === player_name
+      return player
+    end
+  end
+  all_info[:away][:players].each do |player_away|
+    if player_away[:player_name] === player_name
+      return player_away
+    end
+  end
+end
+
+def big_shoe_rebounds
+  all_info = game_hash
+  biggest_shoe = 0
+  player_bigfoot = {}
+  all_info[:home][:players].each do |player|
+    if player[:shoe] > biggest_shoe
+      biggest_shoe = player[:shoe]
+      player_bigfoot = player
+    end
+  end
+  all_info[:away][:players].each do |player|
+    if player[:shoe] > biggest_shoe
+      biggest_shoe = player[:shoe]
+      player_bigfoot = player
+    end
+  end
+  return player_bigfoot[:rebounds]
+end
+
+
+    
+
+
+
+
+
+
+
+
+
