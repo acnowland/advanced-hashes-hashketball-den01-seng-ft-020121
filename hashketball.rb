@@ -194,6 +194,20 @@ def player_numbers(team_name)
   return all_nums
 end
 
+def player_stats(player_name)
+  all_info = game_hash 
+  all_info[:home][:players].each do |player|
+    if player[:player_name] === player_name
+      return player
+    end
+  end
+  all_info[:away][:players].each do |player_away|
+    if player_away[:player_name] === player_name
+      return player_away
+    end
+  end
+end
+
 
     
 
