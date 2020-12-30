@@ -178,10 +178,16 @@ def team_names
   return teams
 end
 
-def player_numers(player_name)
-  
-  
+def player_numbers(team_name)
+  all_info = game_hash
+  all_nums = []
+  if all_info[:home][:team_name] == team_name
+    all_info[:home][:players].each do |player|
+      binding.pry
+    end
+  end
 end
+
 
     
 
