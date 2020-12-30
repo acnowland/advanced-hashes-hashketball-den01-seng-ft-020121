@@ -134,23 +134,6 @@ end
 #player_stats returns all stats for a given player 
 #big_shoe_rebounds --> finds biggest shoe size and returns number of rebounds they had 
 # Write code here
-=begin
-def num_points_scored(player_name)
-  all_info = game_hash
-  all_info[:home][:players].each do |player|
-    if player[:player_name] === player_name
-      return player[:points]
-    else
-      all_info[:away][:players].each do |player_away|
-        if player_away[:player_name] === player_name
-          return player_away[:points]
-        end
-      end
-    end
-  end
-end
-=end
-
 def num_points_scored(player_name)
   all_info = game_hash
   all_info[:home][:players].each do |player|
