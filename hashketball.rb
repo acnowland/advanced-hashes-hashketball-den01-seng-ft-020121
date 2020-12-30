@@ -183,9 +183,15 @@ def player_numbers(team_name)
   all_nums = []
   if all_info[:home][:team_name] == team_name
     all_info[:home][:players].each do |player|
-      binding.pry
+      all_nums.push(player[:number])
     end
   end
+  if all_info[:away][:team_name] == team_name
+    all_info[:away][:players].each do |player|
+      all_nums.push(player[:number])
+    end
+  end
+  return all_nums
 end
 
 
