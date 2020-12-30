@@ -211,7 +211,13 @@ end
 def big_shoe_rebounds
   all_info = game_hash
   biggest_shoe = 0
-  
+  all_info[:home][:players].each do |player|
+    if player[:shoe] > biggest_shoe
+      biggest_shoe = player[:shoe]
+      player_bigfoot = player
+    end
+  end
+
   
 end
 
