@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pry'
 def game_hash
   {
     home: {
@@ -135,7 +136,8 @@ end
 # Write code here
 
 def num_points_scored(player_name)
-  return
+  all_infro = game_hash
+  binding.pry
   
 end
 
