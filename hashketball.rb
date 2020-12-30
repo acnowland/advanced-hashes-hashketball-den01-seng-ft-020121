@@ -167,8 +167,8 @@ def team_colors(team_name)
   if all_info[:all_info][:home][:team_name] == team_name
     return all_info[:all_info][:home][:colors]
   end
-  return all_info[:all_info][:away][:colors]
   binding.pry
+  return all_info[:all_info][:away][:colors]
 end
 
     
