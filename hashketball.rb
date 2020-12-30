@@ -141,6 +141,12 @@ def num_points_scored(player_name)
     if player[:player_name] === player_name
       return player[:points]
     else
+      all_info[:away][:players].each do |player_away|
+        if player_away[:player_name] === player_name
+          return player_away[:points]
+        end
+      end
+    end
   end
 end
 
