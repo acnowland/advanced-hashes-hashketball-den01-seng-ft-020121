@@ -217,8 +217,7 @@ def big_shoe_rebounds
       player_bigfoot = player
     end
   end
-
-  
+  binding.pry
 end
 
 
