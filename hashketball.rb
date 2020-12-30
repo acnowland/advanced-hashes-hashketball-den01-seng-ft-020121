@@ -130,4 +130,5 @@ end
 #team_colors --> arg of team name and returns array of jersey colors 
 # team_names --> returns team names 
 #player_nubers --> takes team name and returns  all players jersey numbers 
+#player_stats returns all stats for a given player 
 # Write code here
