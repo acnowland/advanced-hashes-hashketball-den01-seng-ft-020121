@@ -126,13 +126,13 @@ def game_hash
     }
   }
 end
-#num_points_scored --> takes argument of name and returns # points scored 
-#shoe_size --> takes arg of name and outputs shoe size 
-#team_colors --> arg of team name and returns array of jersey colors 
-# team_names --> returns team names 
-#player_nubers --> takes team name and returns  all players jersey numbers 
-#player_stats returns all stats for a given player 
-#big_shoe_rebounds --> finds biggest shoe size and returns number of rebounds they had 
+#num_points_scored --> takes argument of name and returns # points scored
+#shoe_size --> takes arg of name and outputs shoe size
+#team_colors --> arg of team name and returns array of jersey colors
+# team_names --> returns team names
+#player_nubers --> takes team name and returns  all players jersey numbers
+#player_stats returns all stats for a given player
+#big_shoe_rebounds --> finds biggest shoe size and returns number of rebounds they had
 # Write code here
 def num_points_scored(player_name)
   all_info = game_hash
@@ -195,7 +195,7 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  all_info = game_hash 
+  all_info = game_hash
   all_info[:home][:players].each do |player|
     if player[:player_name] === player_name
       return player
@@ -227,14 +227,4 @@ def big_shoe_rebounds
   return player_bigfoot[:rebounds]
 end
 
-
-    
-
-
-
-
-
-
-
-
-
+puts team_names
